@@ -1,0 +1,38 @@
+/*LOGIN BANNER*/
+.banner{
+    display: flex;
+    flex: 2;
+}
+/*LOGIN FORM*/
+.form{
+    display: flex;
+    flex: 1;
+}
+.form-title{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.form-subtitle{
+    font-size: medium;
+    font-weight: 300;
+}
+.help{
+    margin-top: 10px;
+    background-color: #ff000085;
+    border-radius: 4px;
+    width: 450px;
+    padding: 7px;
+}
+.help-label{
+    color: #af0b0b;
+    font-size: small;
+    font-weight: 400;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.help-text{
+    color: #af0b0b;
+    font-size: small;
+    font-weight: 300;
+    margin-right: 5px;
+}
