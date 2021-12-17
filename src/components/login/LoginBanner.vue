@@ -1,17 +1,7 @@
 <template>
-    <div>
-        <v-layout justify-center>
+    <div class="banner">
+        <div class="banner-img">
             <v-img src="../../assets/imgs/BANNER.png"></v-img>
-        </v-layout>
+        </div>
     </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
