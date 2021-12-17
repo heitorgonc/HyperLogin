@@ -1,13 +1,10 @@
 /*GLOBAL*/
-.background{
-    margin: 0;
-    padding: 0;
-    background-color: #af0b0b;
-}
 .login-home{
     display: flex;
 }
-
+.background{
+    background-color: #af0b0b;
+}
 
 /*LOGIN BANNER*/
 .banner{
@@ -15,6 +12,7 @@
     align-items: center;
     justify-content: center;
     flex: 2;
+    background-color: #af0b0b;
 }
 .banner-img{
     max-width: max-content;
@@ -28,6 +26,7 @@
     align-items: center;
     background-color: #fff;
     flex: 1;
+    border-radius: 8px;
 }
 .form-title{
     font-size: 1.5rem;

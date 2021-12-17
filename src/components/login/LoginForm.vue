@@ -7,7 +7,7 @@
                         <span class="form-title">Bem vindo a Hypersoft!</span>
                         <div class="form-title-icon">
                             <v-icon  class="ml-3" icon="mdi-hand-wave" size="30px"
-                            color="yellow">mdi-hand-wave</v-icon>
+                            color="yellow">mdi-hand-wave-outline</v-icon>
                         </div>
                     </v-layout>
                     <v-layout class="mb-5 mt-5">
@@ -45,7 +45,7 @@
                         </v-row>
                         <v-row>
                             <v-text-field class="login-tf" outlined color="red darken-3" dense placeholder="senha" @click:append="show = !show"
-                            v-model="password" :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'" :type="show ? 'text' : 'password'" 
+                            v-model="password" :append-icon="show ? 'mdi-eye-outline' : 'mdi-eye-off-outline'" :type="show ? 'text' : 'password'" 
                             :rules="[rules.passwordRequired]"></v-text-field>
                         </v-row>
                         <v-row>
@@ -111,7 +111,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>
