@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 const LoginHome = () => import('../components/login/LoginHome')
-const HomeBar = () => import('../components/templates/Bars/HomeBar')
 const LoginForm = () => import('../components/login/LoginForm')
 const LoginBanner = () => import('../components/login/LoginBanner')
 const RegisterForm = () => import('../components/register/RegisterForm')
@@ -15,7 +14,6 @@ const routes = [
         path: '/',
         components:{
             content: LoginHome,
-            appbar: HomeBar
         },
         children:[
             {

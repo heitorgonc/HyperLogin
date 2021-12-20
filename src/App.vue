@@ -1,13 +1,10 @@
 <template>
     <v-app>
-        <v-layout class="background">
-            <v-main>
-                <v-container fluid>
-                    <router-view name="appbar"></router-view>
-                    <router-view name="content"></router-view>
-                </v-container>
-            </v-main>
-        </v-layout>
+        <v-main>
+        <v-container fluid class="ma-0 pa-0">        
+            <router-view name="content"></router-view>
+        </v-container>
+        </v-main>
     </v-app>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="form">
-        <v-card flat tile >
+        <v-card flat tile>
             <v-card-title>
                 <v-layout align-content-end column>
                     <v-layout align-center>
@@ -35,8 +35,8 @@
                             <span>Email</span>
                         </v-row>
                         <v-row>
-                            <v-text-field outlined type="e-mail" class="login-tf" color="red darken-3" dense placeholder="exemplo@hypersoft.com.br" 
-                            v-model="email" single-line :rules="[rules.emailRequired]" spellcheck="false"></v-text-field>
+                            <v-text-field outlined type="email" class="login-tf" color="red darken-3" dense placeholder="exemplo@hypersoft.com.br" 
+                            v-model="email" single-line :rules="[rules.emailRequired, rules.emailValid]" spellcheck="false"></v-text-field>
                         </v-row>
                         <v-row>
                             <v-layout justify-space-between>
@@ -97,8 +97,15 @@ export default {
             show: false,
             rules: {
                 passwordRequired: value => !!value || 'A senha é obrigatória',
-                emailRequired: value => !!value || 'O email é obrigatório'
+                emailRequired: value => !!value || 'O email é obrigatório',
+                emailValid: value => this.validEmail(value) || 'O email não é válido'
             }
+        }
+    },
+    methods:{
+        validEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{3,}))$/;
+            return re.test(email);
         }
     },
     computed:{

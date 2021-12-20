@@ -1,10 +1,13 @@
 /*GLOBAL*/
 .login-home{
     display: flex;
+    height: 100vh;
 }
-.background{
-    background-color: #af0b0b;
+.login-main{
+    display: flex;
+    flex-direction: row;
 }
+html { overflow-y: auto }
 
 /*LOGIN BANNER*/
 .banner{
@@ -12,11 +15,14 @@
     align-items: center;
     justify-content: center;
     flex: 2;
-    background-color: #af0b0b;
+    background-color: #a4afc4c0;
+    height: 100%;
 }
-.banner-img{
-    max-width: max-content;
+.banner-background-gradient{
+    background: rgb(12,75,61);
+    background: linear-gradient(0deg, rgba(12,75,61,1) 0%, rgba(9,179,177,1) 46%, rgba(40,117,116,1) 100%);
 }
+
 
 
 /*LOGIN FORM*/
@@ -26,7 +32,7 @@
     align-items: center;
     background-color: #fff;
     flex: 1;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 .form-title{
     font-size: 1.5rem;
