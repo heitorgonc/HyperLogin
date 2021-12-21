@@ -2,23 +2,23 @@
 html { overflow-y: auto }
 
 
-/*LOGIN HOME*/
-.login-home{
+/*HOME*/
+.home{
     display: flex;
     height: 100vh;
 }
-.login-main{
+.home-content{
     display: flex;
     flex-direction: row;
 }
-.login-background-gradient{
+.background-gradient{
     background: rgb(228,228,228);
     background: linear-gradient(180deg, rgba(228,228,228,1) 0%, rgba(237,237,237,1) 46%, rgba(139,139,139,1) 100%);
 }
-.login-logo{
+.home-logo{
     width: 120px
 }
-.login-bar{
+.home-bar{
     width: 120px;
     height: 120px;
 }
@@ -51,11 +51,15 @@ html { overflow-y: auto }
     font-weight: 400;
     color: rgba(0, 0, 0, 0.705);
     margin-bottom: 10px;
+    margin-right: 5px;
+}
+.form-title-icon{
+    margin-bottom: 10px;
 }
 .form-subtitle{
     font-size: 15px;
     font-weight: 300;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .help{
     background-color: #ff000085;
@@ -76,10 +80,6 @@ html { overflow-y: auto }
     font-size: small;
     font-weight: 300;
     margin-right: 5px;
-}
-.login-textfield{
-    text-decoration: none;
-    height: 47px;
 }
 .login-btn-text{
     color: #fff;
@@ -106,11 +106,11 @@ html { overflow-y: auto }
     .banner{
         display: none;
     }
-    .login-background-gradient{
+    .background-gradient{
         background: #fff;
         background-color: #fff;
     }
-    .login-home{
+    .home{
         flex-direction: column;
     }
 }
@@ -118,7 +118,7 @@ html { overflow-y: auto }
     .banner{
         display: none;
     }
-    .login-logo{
+    .home-logo{
         width: 90px;
     }
 }
@@ -127,9 +127,9 @@ html { overflow-y: auto }
         font-size: large;
     }
     .form-subtitle{
-        font-size: small;
+        font-size: 14px;
     }
-    .login-logo{
+    .home-logo{
         width: 70px;
     }
 }
@@ -139,8 +139,8 @@ html { overflow-y: auto }
         padding-right: 30px;
     }
     .form-subtitle{
-        font-size: 12px;
-        padding-right: 28px;
+        font-size: 14px;
+        
     }
 }
 @media only screen and (max-width: 320px){

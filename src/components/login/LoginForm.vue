@@ -6,8 +6,7 @@
                     <v-layout align-center>
                         <span class="form-title">Bem vindo a Hypersoft!</span>
                         <div class="form-title-icon">
-                            <v-icon  class="ml-3" icon="mdi-hand-wave" size="30px"
-                            color="yellow">mdi-hand-wave-outline</v-icon>
+                            <v-img src="../../assets/imgs/Icons/hand-wave48px.png"></v-img>
                         </div>
                     </v-layout>
                     <div class="form-subtitle">
@@ -33,7 +32,7 @@
                             <span class="form-label">Email</span>
                         </v-row>
                         <v-row>
-                            <v-text-field outlined type="email" class="login-textfield" color="red darken-3" dense placeholder="exemplo@hypersoft.com.br" 
+                            <v-text-field outlined type="email" color="red darken-3" dense placeholder="exemplo@hypersoft.com.br" 
                             v-model="email" single-line :rules="[rules.emailRequired, rules.emailValid]" spellcheck="false"></v-text-field>
                         </v-row>
                         <v-row>
@@ -42,7 +41,7 @@
                             </v-layout>
                         </v-row>
                         <v-row>
-                            <v-text-field class="login-textfield" outlined color="red darken-3" dense placeholder="senha" @click:append="show = !show"
+                            <v-text-field outlined color="red darken-3" dense placeholder="......" @click:append="show = !show"
                             v-model="password" :append-icon="show ? 'mdi-eye-outline' : 'mdi-eye-off-outline'" :type="show ? 'text' : 'password'" 
                             :rules="[rules.passwordRequired, rules.passwordShort]"></v-text-field>
                         </v-row>
