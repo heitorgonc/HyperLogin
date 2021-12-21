@@ -10,7 +10,7 @@
                         </div>
                     </v-layout>
                     <div class="form-subtitle">
-                        <span>Gerencie seu app de forma fácil e divertida</span>
+                        <span>Gerencie sua aplicação de forma fácil e divertida</span>
                     </div>
                 </v-layout>
             </v-card-title>
