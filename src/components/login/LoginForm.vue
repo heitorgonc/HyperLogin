@@ -1,8 +1,8 @@
 <template>
     <div class="form">
-        <v-card flat tile>
+        <v-card flat tile color="transparent">
             <v-card-title>
-                <v-layout align-content-end column>
+                <v-layout align-content-start column>
                     <v-layout align-center>
                         <span class="form-title">Bem vindo a Hypersoft!</span>
                         <div class="form-title-icon">
@@ -10,19 +10,17 @@
                             color="yellow">mdi-hand-wave-outline</v-icon>
                         </div>
                     </v-layout>
-                    <v-layout class="mb-5 mt-5">
-                        <div class="pa-2">
-                            <span class="form-subtitle">Por favor entre em sua conta para começar a aventura!</span>
-                        </div>
-                    </v-layout>
+                    <div class="form-subtitle">
+                        <span>Por favor entre em sua conta para começar a aventura!</span>
+                    </div>
                     <div class="help">
-                        <v-layout  column>
+                        <v-layout column>
                             <v-layout justify-space-between>
                                 <span><span class="help-label">Admin:</span><span class="help-text">admin@hypersoft.com | admin</span></span>
                                 <v-icon icon="mdi-help-circle-outline" color="red">mdi-help-circle-outline</v-icon>
                             </v-layout>
                             <v-layout>
-                                <span><span class="help-label">Client:</span><span class="help-text">clent@hypersoft.com | client</span></span>
+                                <span class="help-label">Client:</span><span class="help-text">clent@hypersoft.com | client</span>
                             </v-layout>
                         </v-layout>
                     </div>
@@ -32,32 +30,32 @@
                 <v-form>
                     <v-container fluid>
                         <v-row>
-                            <span>Email</span>
+                            <span class="form-label">Email</span>
                         </v-row>
                         <v-row>
-                            <v-text-field outlined type="email" class="login-tf" color="red darken-3" dense placeholder="exemplo@hypersoft.com.br" 
+                            <v-text-field outlined type="email" class="login-textfield" color="red darken-3" dense placeholder="exemplo@hypersoft.com.br" 
                             v-model="email" single-line :rules="[rules.emailRequired, rules.emailValid]" spellcheck="false"></v-text-field>
                         </v-row>
                         <v-row>
                             <v-layout justify-space-between>
-                                <span>Senha</span> <span class="link">Esqueceu a senha?</span>
+                                <span class="form-label">Senha</span> <span class="link">Esqueceu a senha?</span>
                             </v-layout>
                         </v-row>
                         <v-row>
-                            <v-text-field class="login-tf" outlined color="red darken-3" dense placeholder="senha" @click:append="show = !show"
+                            <v-text-field class="login-textfield" outlined color="red darken-3" dense placeholder="senha" @click:append="show = !show"
                             v-model="password" :append-icon="show ? 'mdi-eye-outline' : 'mdi-eye-off-outline'" :type="show ? 'text' : 'password'" 
-                            :rules="[rules.passwordRequired]"></v-text-field>
+                            :rules="[rules.passwordRequired, rules.passwordShort]"></v-text-field>
                         </v-row>
                         <v-row>
                             <v-checkbox label="Lembre de mim" color="red darken-2"></v-checkbox>
                         </v-row>
                         <v-row>
-                            <v-btn block color="red darken-1" class="mt-4" :disabled=" noEmail || noPassword">
-                                <span class="login-btn-text">Sign in</span>
+                            <v-btn block color="red darken-1" class="mt-4" :disabled=" noEmail || noPassword || !validEmail(email) || shortPassword">
+                                <span class="login-btn-text">Entrar</span>
                             </v-btn>
                         </v-row>
                         <v-row>
-                            <v-layout justify-center class="pt-5 pb-5">
+                            <v-layout justify-center class="pt-3 pb-3">
                                 <span class="login-subtext mr-1">Novo por aqui ?</span>
                                 <router-link class="login-subtext link" to="/register">Crie sua conta</router-link>
                             </v-layout>
@@ -97,13 +95,14 @@ export default {
             show: false,
             rules: {
                 passwordRequired: value => !!value || 'A senha é obrigatória',
+                passwordShort: value => value.length >= 6 || 'A senha é muito curta',
                 emailRequired: value => !!value || 'O email é obrigatório',
                 emailValid: value => this.validEmail(value) || 'O email não é válido'
             }
         }
     },
     methods:{
-        validEmail(email) {
+        validEmail(email){
             var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{3,}))$/;
             return re.test(email);
         }
@@ -114,6 +113,9 @@ export default {
         },
         noPassword(){
             return this.password.length == 0
+        },
+        shortPassword(){
+            return this.password.length < 6
         }
     }
 }
