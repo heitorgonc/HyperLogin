@@ -6,6 +6,8 @@ const LoginForm = () => import('../components/login/LoginForm')
 const LoginBanner = () => import('../components/login/LoginBanner')
 const RegisterForm = () => import('../components/register/RegisterForm')
 const RegisterBanner = () => import('../components/register/RegisterBanner')
+const ProfileHome = () => import('../components/profile/ProfileHome')
+const ProfileNavigation = () => import('../components/profile/ProfileNavigation')
 
 Vue.use(VueRouter)
 
@@ -28,6 +30,26 @@ const routes = [
                 components:{
                     form: RegisterForm,
                     banner: RegisterBanner
+                }
+            }
+        ]
+    },
+    {
+        path: '/profile/dashboards/',
+        components:{
+            content: ProfileHome,
+        },
+        children:[
+            {
+                path: 'ecomerce',
+                components:{
+                    navigation: ProfileNavigation
+                }
+            },
+            {
+                path: 'analytics',
+                components:{
+                    navigation: ProfileNavigation
                 }
             }
         ]

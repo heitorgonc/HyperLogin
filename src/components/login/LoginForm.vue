@@ -49,7 +49,7 @@
                             <v-checkbox label="Lembre de mim" color="red darken-2"></v-checkbox>
                         </v-row>
                         <v-row>
-                            <v-btn block color="red darken-1" class="mt-4" :disabled=" noEmail || noPassword || !validEmail(email) || shortPassword">
+                            <v-btn block color="red darken-1" class="mt-4" to="/profile/dashboards/ecomerce" :disabled=" noEmail || noPassword || !validEmail(email) || shortPassword">
                                 <span class="login-btn-text">Entrar</span>
                             </v-btn>
                         </v-row>

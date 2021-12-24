@@ -98,6 +98,17 @@ html { overflow-y: auto }
 }
 
 
+/* PROFILE NAVIGATION */
+.list-item-dashboard{
+    color: rgb(156, 156, 156) !important;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.list-item-dashboard-active{
+    color: rgb(184, 0, 0) !important;
+}
+
+
 /*RESPONSIVITY*/
 @media only screen and (max-width: 1024px){
     .form-subtitle{
