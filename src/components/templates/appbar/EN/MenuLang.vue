@@ -30,7 +30,7 @@ export default {
             },
             flags:[
                 {title: 'English', src: 'https://img.icons8.com/color/48/000000/usa.png', way: ''},
-                {title: 'Portuguese-BR', src: 'https://img.icons8.com/color/48/000000/brazil.png', way: 'BR/'}
+                {title: 'Portuguese-BR', src: 'https://img.icons8.com/color/48/000000/brazil.png', way: 'ecomerce/BR/'}
             ],
         }
     },

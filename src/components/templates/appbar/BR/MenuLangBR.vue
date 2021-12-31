@@ -29,7 +29,7 @@ export default {
                 title: 'Português-BR', src: 'https://img.icons8.com/color/48/000000/brazil.png'
             },
             flags:[
-                {title: 'Inglês', src: 'https://img.icons8.com/color/48/000000/usa.png', way: '/'},
+                {title: 'Inglês', src: 'https://img.icons8.com/color/48/000000/usa.png', way: '/profile/dashboards/ecomerce'},
                 {title: 'Português-BR', src: 'https://img.icons8.com/color/48/000000/brazil.png', way: ''}
             ],
         }
