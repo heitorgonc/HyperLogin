@@ -35,8 +35,6 @@ html { overflow-y: auto }
 }
 
 
-
-
 /*LOGIN FORM*/
 .form{
     display: flex;
@@ -99,13 +97,72 @@ html { overflow-y: auto }
 
 
 /* PROFILE NAVIGATION */
+.list-title-dashboard{
+    color: rgb(53, 53, 53) !important;
+    background-color: rgb(124, 124, 124);
+    text-decoration: none;
+    border-radius: 8px;
+}
 .list-item-dashboard{
-    color: rgb(156, 156, 156) !important;
     text-decoration: none;
     border-radius: 8px;
 }
 .list-item-dashboard-active{
-    color: rgb(184, 0, 0) !important;
+    background-color: rgb(182, 32, 32) !important;
+    color: #fff !important;
+}
+.list-icon-dashboard-active{
+    color: #fff !important;
+}
+.list-dashboards-item-title{
+    font-family: 'Rubik';
+    font-weight: 600;
+    color: #5c0000;
+}
+.list-item-title{
+    font-family: 'Rubik';
+    font-weight: 400;
+    color: #929292;
+    font-size: x-small;
+}
+.list-icon-active{
+    color: #fff;
+}
+
+
+/* PROFILE HOME*/
+.profilehome-background{
+    background-color: rgb(231, 231, 231);
+    height: 100vh;
+}
+
+
+/* APP BAR */
+.appbar-left-items{
+    display: flex;
+}
+.appbar-right-items{
+    display: flex;
+}
+.appbar-avatar-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.appbar-avatar-title{
+    font-weight: 600;
+    font-size: 15px;
+}
+.appbar-avatar-subtitle{
+    font-weight: 300;
+    font-size: small;
+}
+
+
+/* ANIMATIONS */
+.head-shake:hover{
+    animation: headShake;
+    animation-duration: 1s;
 }
 
 

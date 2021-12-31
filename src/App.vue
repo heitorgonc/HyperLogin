@@ -1,9 +1,13 @@
 <template>
-    <v-app>
-        <v-main>
-            <v-container fluid class="ma-0 pa-0">        
-                <router-view name="content"></router-view>
-            </v-container>
-        </v-main>
-    </v-app>
+  <v-app>
+    <v-main>
+      <router-view name="home"></router-view>
+    </v-main>
+  </v-app>
 </template>
+
+<script>
+export default {
+  name: 'App',
+};
+</script>
