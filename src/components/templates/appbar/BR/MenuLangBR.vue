@@ -10,7 +10,7 @@
                 </v-list-item>
             </template>
             <v-list class="mt-14">
-                <v-list-item v-for="(flag, i) in flags" :key="i" @click="changeLang(flag)">
+                <v-list-item v-for="(flag, i) in flags" :key="i" @click="changeLang(flag)" :to="flag.way">
                     <div class="mr-2">
                         <v-img :src="flag.src"></v-img>
                     </div>
@@ -29,8 +29,8 @@ export default {
                 title: 'Português-BR', src: 'https://img.icons8.com/color/48/000000/brazil.png'
             },
             flags:[
-                {title: 'Inglês', src: 'https://img.icons8.com/color/48/000000/usa.png'},
-                {title: 'Português-BR', src: 'https://img.icons8.com/color/48/000000/brazil.png'}
+                {title: 'Inglês', src: 'https://img.icons8.com/color/48/000000/usa.png', way: '/'},
+                {title: 'Português-BR', src: 'https://img.icons8.com/color/48/000000/brazil.png', way: ''}
             ],
         }
     },
