@@ -2,11 +2,11 @@
     <div>
         <v-list-item class="px-2 mt-5">
             <v-list-item-avatar>
-                <v-btn to="/profile/dashboards/ecomerce" depressed fab color="red darken-4">
+                <router-link to="/profile/dashboards/ecomerce">
                     <div>
                         <v-img src="../../../assets/imgs/Icons/letra-h32px.png"></v-img>
                     </div>
-                </v-btn>
+                </router-link>
             </v-list-item-avatar>
             <v-list-item-title>
                 <span class="list-dashboards-item-title">Hypersoft</span>
